@@ -1,0 +1,10 @@
+fastapi
+uvicorn [standard]
+pydantic-settings
+python-multipart
+openai
+supabase
+pypdf
+langchain-text-splitters
+pytest
+pytest-asyncio
