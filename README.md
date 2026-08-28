@@ -4,7 +4,6 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL%20%2B%20pgvector-3ECF8E?style=flat&logo=supabase&logoColor=white)](https://supabase.com/)
 [![Flutter](https://img.shields.io/badge/Flutter-Web-02569B?style=flat&logo=flutter&logoColor=white)](https://flutter.dev/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 AskRiver AI adalah aplikasi web **Retrieval-Augmented Generation (RAG)** yang bertujuan untuk memudahkan masyarakat memahami kondisi kesehatan air sungai serta regulasi baku mutu lingkungan di Indonesia. Pengguna cukup bertanya atau mengunggah dokumen tambahan PDF apabila deperlukan (seperti Peraturan Pemerintah, dokumen baku mutu air sungai, atau laporan lingkungan), lalu melakukan diskusi interaktif dengan AI yang menjawab secara presisi berdasarkan isi dokumen tersebut.
 
@@ -26,24 +25,28 @@ AskRiver AI adalah aplikasi web **Retrieval-Augmented Generation (RAG)** yang be
 Python 3.11+ / FastAPI · Supabase (PostgreSQL + pgvector) · Sumopod API (`text-embedding-3-small`, `gpt-5-nano`) · Flutter Web · `pypdf`, `langchain-text-splitters`
 
 ## Quick Start
-
+### 1. Backend (FastAPI)
 ```bash
 cd backend
-cp .env.example .env        # isi credentials Anda
+cp .env.example .env        # Isi credentials Anda
+python -m venv venv
+source venv/bin/activate    # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
-```
-
 Server: `http://127.0.0.1:8000` — API docs interaktif (Swagger): `http://127.0.0.1:8000/docs`
-
+ 
 Setup database (SQL schema) & detail konfigurasi lengkap: lihat **[docs/SETUP.md](docs/SETUP.md)**.
 Arsitektur & data flow sistem: lihat **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**.
+```
 
-## Project Structure
-
+### 2. Frontend (flutter)
+``` bash
+cd frontend
+flutter pub get
+flutter run -d chrome
 ```
 askriver-ai/
-├── Backend/
+├── backend/
 │   ├── app/
 │   │   ├── api/          # Route handlers & dependencies
 │   │   ├── core/         # Config & Environment settings
@@ -56,6 +59,10 @@ askriver-ai/
 ├── frontend/             # Flutter Web Application
 ├── docs/                 # Documentation & Architecture
 └── README.md             # Project documentation
-
 ---
+
+Note:
+Detail setup database (SQL schema & HNSW Index) dapat dilihat di docs/SETUP.md.
+Untuk memahami arsitektur & aliran data sistem, lihat docs/ARCHITECTURE.md.
+
 Author: Ihsan Aliyandi
