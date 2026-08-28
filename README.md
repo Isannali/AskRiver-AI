@@ -45,6 +45,7 @@ cd frontend
 flutter pub get
 flutter run -d chrome
 ```
+```text
 askriver-ai/
 ├── backend/
 │   ├── app/
@@ -59,10 +60,11 @@ askriver-ai/
 ├── frontend/             # Flutter Web Application
 ├── docs/                 # Documentation & Architecture
 └── README.md             # Project documentation
+```
 ---
 
 Note:
-Detail setup database (SQL schema & HNSW Index) dapat dilihat di docs/SETUP.md.
-Untuk memahami arsitektur & aliran data sistem, lihat docs/ARCHITECTURE.md.
+Detail setup database (SQL schema & HNSW Index) dapat dilihat di **[docs/Setup.md](docs/Setup.md)**..
+Untuk memahami arsitektur & aliran data sistem dapat dilihat di **[docs/Architecture.md](docs/Architecture.md)**.
 
 Author: Ihsan Aliyandi
