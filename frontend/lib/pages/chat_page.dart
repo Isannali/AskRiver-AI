@@ -21,21 +21,21 @@ class _ChatPageState extends State<ChatPage> {
 
   final List<Map<String, String>> suggestionCards = const [
     {
-      "title": "Ringkas dokumen ini",
-      "subtitle": "dalam poin-poin penting dan mudah dipahami",
-    },
-    {
-      "title": "Jelaskan konsep utama",
+      "title": "apa saja yang harus dilakukan untuk menjaga kualitas air sungai tetap ideal",
       "subtitle": "dengan contoh sederhana dari dokumen",
     },
     {
-      "title": "Buat daftar pertanyaan",
-      "subtitle": "untuk membantu saya mempelajari materi ini",
+      "title": "apa yang menyebabkan kualitas air sungai tercemar",
+      "subtitle": "dan yang paling berpengaruh terhadap kualitas air sungai itu apa?",
     },
     {
-      "title": "Temukan informasi penting",
-      "subtitle": "yang perlu saya perhatikan dari dokumen",
+      "title": "parameter kualitas air sungai yang ideal itu berapa?",
+      "subtitle": "berikan secara rinci",
     },
+    {
+      "title": "ph sungai 7 itu menunjukan apa",
+      "subtitle": "jelaskan secara rinci",
+    },    
   ];
 
   @override
