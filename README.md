@@ -6,15 +6,20 @@
 [![Flutter](https://img.shields.io/badge/Flutter-Web-02569B?style=flat&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-AskRiver AI adalah aplikasi web **Retrieval-Augmented Generation (RAG)** dengan *chat memory*. Upload dokumen PDF (laporan, jurnal, baku mutu air sungai), lalu diskusi multi-turn dengan AI yang menjawab berdasarkan isi dokumen tersebut.
+AskRiver AI adalah aplikasi web **Retrieval-Augmented Generation (RAG)** yang bertujuan untuk memudahkan masyarakat memahami kondisi kesehatan air sungai serta regulasi baku mutu lingkungan di Indonesia. Pengguna cukup bertanya atau mengunggah dokumen tambahan PDF apabila deperlukan (seperti Peraturan Pemerintah, dokumen baku mutu air sungai, atau laporan lingkungan), lalu melakukan diskusi interaktif dengan AI yang menjawab secara presisi berdasarkan isi dokumen tersebut.
+
+## 🎯 Purpose & Vision
+
+- **Menerjemahkan Regulasi & Data:** Menghubungkan data pengukuran fisik (alat IoT) dengan dokumen resmi pemerintah (PP Baku Mutu Air & Pengelolaan Lingkungan).
+- **Demokratisasi Informasi:** Memudahkan warga awam mengetahui dan memahami kondisi serta tingkat keamanan air sungai di sekitar mereka secara intuitif melalui percakapan interaktif berbasis AI.
 
 ## Features
 
 - 📄 **PDF Ingestion** — ekstraksi teks & chunking otomatis
-- 🔍 **Vector Search (RAG)** — pencarian konteks via `pgvector` (cosine similarity)
+- 🔍 **Vector Search (RAG)** — Pencarian kemiripan vektor via `pgvector` menggunakan indeks HNSW (Cosine Distance)
 - 🧠 **Chat Memory** — AI mengingat riwayat percakapan per sesi
 - ⚡ **Async Architecture** — non-blocking I/O di FastAPI
-- 🎨 **Web UI** — Flutter Web (Phase 2)
+- 🎨 **Web UI** — Flutter Web 
 
 ## Tech Stack
 
@@ -38,19 +43,19 @@ Arsitektur & data flow sistem: lihat **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.
 
 ```
 askriver-ai/
-├── backend/
+├── Backend/
 │   ├── app/
-│   │   ├── api/          # Route handlers / Endpoints
-│   │   ├── core/         # Security, environment configs
-│   │   ├── models/       # Pydantic schemas & Data Models
-│   │   ├── services/     # RAG, Embedding, & Supabase Services
+│   │   ├── api/          # Route handlers & dependencies
+│   │   ├── core/         # Config & Environment settings
+│   │   ├── db/           # Supabase client setup
+│   │   ├── schemas/      # Pydantic request & response models
+│   │   ├── services/     # RAG, PDF processing, & LLM Logic
 │   │   └── main.py       # FastAPI Entry Point
-│   ├── .env.example
-│   ├── requirements.txt
-│   └── Dockerfile
-├── frontend/             # Flutter Web Application (Phase 2)
-├── docs/                 # Setup & architecture docs
-└── README.md
-```
+│   ├── .env.example      # Environment template
+│   └── requirements.txt  # Python dependencies
+├── frontend/             # Flutter Web Application
+├── docs/                 # Documentation & Architecture
+└── README.md             # Project documentation
+
 ---
 Author: Ihsan Aliyandi
