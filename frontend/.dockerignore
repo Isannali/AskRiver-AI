@@ -1,0 +1,31 @@
+# Version Control & IDEs
+.git
+.gitignore
+.idea
+.vscode
+*.iml
+
+# Node / Build artifacts & temp files
+.dart_tool/
+.pub-cache/
+.pub/
+build/
+coverage/
+*.log
+
+# Native Desktop & Mobile Platforms (Tidak dipakai untuk Web build)
+android/
+ios/
+linux/
+macos/
+windows/
+
+# Environment Files (Aman agar tidak sengaja membawa secret lokal)
+# Catatan: Dockerfile kamu sudah memiliki 'RUN touch .env' untuk penanganan fallback.
+
+# Docker & CI Files
+Dockerfile
+dockerfile
+docker-compose.yml
+.dockerignore
+README.md
