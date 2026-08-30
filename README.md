@@ -34,9 +34,6 @@ source venv/bin/activate    # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 Server: `http://127.0.0.1:8000` — API docs interaktif (Swagger): `http://127.0.0.1:8000/docs`
- 
-Setup database (SQL schema) & detail konfigurasi lengkap: lihat **[docs/SETUP.md](docs/SETUP.md)**.
-Arsitektur & data flow sistem: lihat **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**.
 ```
 
 ### 2. Frontend (flutter)
