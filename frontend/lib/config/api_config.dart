@@ -1,12 +1,10 @@
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 class ApiConfig {
-  static String get baseUrl =>
-    dotenv.env['BASE_URL'] ?? "https://default-url.com";
+  static const String baseUrl = String.fromEnvironment(
+    'BASE_URL',
+    defaultValue: 'http://localhost:8000',
+  );
 
-  static String get chat =>
-      "$baseUrl/chat";
+  static String get chat => '$baseUrl/chat';
 
-  static String get uploadDocument =>
-      "$baseUrl/documents/Upload";
+  static String get uploadDocument => '$baseUrl/documents/Upload';
 }
-
