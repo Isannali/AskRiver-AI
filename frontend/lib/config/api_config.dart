@@ -4,7 +4,7 @@ class ApiConfig {
     defaultValue: 'http://localhost:8000',
   );
 
-  static String get chat => '$baseUrl/chat';
+  static String get chat => '$baseUrl/api/v1/chat';
 
-  static String get uploadDocument => '$baseUrl/documents/Upload';
+  static String get uploadDocument => '$baseUrl/api/v1/documents/Upload';
 }
